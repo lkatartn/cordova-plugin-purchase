@@ -136,7 +136,8 @@ store.when("requested", function(product) {
 
         store.inappbilling[method](function(data) {
             // Success callback.
-            //
+            // xml example
+            //      https://msdn.microsoft.com/en-us/library/windows/apps/mt219692.aspx
             // example data:
             // {
             //     base64: XML encoded in base64
@@ -149,6 +150,7 @@ store.when("requested", function(product) {
             var productReceipt = doc.documentElement.getElementsByTagName("ProductReceipt")[0];
             productData.purhaseDateString = productReceipt.attributes.PurchaseDate.value || "";
             productData.expirationDateString = productReceipt.attributes.ExpirationDate.value || "";
+            productData.receipt = data.base64;
 
             store.setProductData(product, productData);
         },
