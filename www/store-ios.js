@@ -8,6 +8,7 @@ store.verbosity = 0;
     store.PAID_SUBSCRIPTION = "paid subscription";
     store.CONSUMABLE = "consumable";
     store.NON_CONSUMABLE = "non consumable";
+    store.DURABLE = store.NON_CONSUMABLE;
     var ERROR_CODES_BASE = 6777e3;
     store.ERR_SETUP = ERROR_CODES_BASE + 1;
     store.ERR_LOAD = ERROR_CODES_BASE + 2;

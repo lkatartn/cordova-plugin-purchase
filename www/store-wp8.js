@@ -856,20 +856,7 @@ store.verbosity = 0;
     store.when("refreshed", function() {
         if (!initialized) init();
     });
-    store.when("re-refreshed", function() {
-        iabGetPurchases();
-    });
-    var BILLING_RESPONSE_RESULT = {
-        OK: 0,
-        USER_CANCELED: 1,
-        SERVICE_UNAVAILABLE: 2,
-        BILLING_UNAVAILABLE: 3,
-        ITEM_UNAVAILABLE: 4,
-        DEVELOPER_ERROR: 5,
-        ERROR: 6,
-        ITEM_ALREADY_OWNED: 7,
-        ITEM_NOT_OWNED: 8
-    };
+    store.when("re-refreshed", function() {});
     function init() {
         if (initialized) return;
         initialized = true;
@@ -916,23 +903,6 @@ store.verbosity = 0;
                 p.trigger("loaded");
             }
         }
-        iabGetPurchases();
-    }
-    function iabGetPurchases() {
-        store.inappbilling.getPurchases(function(purchases) {
-            if (purchases && purchases.length) {
-                for (var i = 0; i < purchases.length; ++i) {
-                    var purchase = purchases[i];
-                    var p = store.get(purchase.productId);
-                    if (!p) {
-                        store.log.warn("plugin -> user owns a non-registered product");
-                        continue;
-                    }
-                    store.setProductData(p, purchase);
-                }
-            }
-            store.ready(true);
-        }, function() {});
     }
     store.when("requested", function(product) {
         store.ready(function() {
@@ -952,11 +922,15 @@ store.verbosity = 0;
             }
             product.set("state", store.INITIATED);
             var method = "buy";
-            if (product.type !== store.NON_CONSUMABLE && product.type !== store.CONSUMABLE) {
-                method = "subscribe";
-            }
             store.inappbilling[method](function(data) {
-                store.setProductData(product, data);
+                var xmlString = decodeURIComponent(window.escape(window.atob(data.base64)));
+                var parser = new DOMParser();
+                var doc = parser.parseFromString(xmlString, "text/xml");
+                var productData = {};
+                var productReceipt = doc.documentElement.getElementsByTagName("ProductReceipt")[0];
+                productData.purhaseDateString = productReceipt.attributes.PurchaseDate.value || "";
+                productData.expirationDateString = productReceipt.attributes.ExpirationDate.value || "";
+                store.setProductData(product, productData);
             }, function(err, code) {
                 store.log.info("plugin -> " + method + " error " + code);
                 if (code === store.ERR_PAYMENT_CANCELLED) {
@@ -967,11 +941,6 @@ store.verbosity = 0;
                         code: code || store.ERR_PURCHASE,
                         message: "Purchase failed: " + err
                     });
-                }
-                if (code === BILLING_RESPONSE_RESULT.ITEM_ALREADY_OWNED) {
-                    product.set("state", store.APPROVED);
-                } else {
-                    product.set("state", store.VALID);
                 }
             }, product.id);
         });
@@ -995,39 +964,8 @@ store.verbosity = 0;
     });
 })();
 
-(function() {
-    "use strict";
-    store.setProductData = function(product, data) {
-        store.log.debug("android -> product data for " + product.id);
-        store.log.debug(data);
-        product.transaction = {
-            type: "android-playstore",
-            id: data.orderId,
-            purchaseToken: data.purchaseToken,
-            developerPayload: data.developerPayload,
-            receipt: data.receipt,
-            signature: data.signature
-        };
-        if (product.state !== store.OWNED && product.state !== store.FINISHED && product.state !== store.APPROVED) {
-            if (data.purchaseState === 0) {
-                product.set("state", store.APPROVED);
-            }
-        }
-        if (product.state === store.OWNED || product.state === store.FINISHED || product.state === store.APPROVED) {
-            if (data.purchaseState === 1) {
-                product.trigger("cancelled");
-                product.set("state", store.VALID);
-            } else if (data.purchaseState === 2) {
-                product.trigger("refunded");
-                product.set("state", store.VALID);
-            }
-        }
-    };
-})();
-
 if (window) {
     window.store = store;
-    store.android = store.inappbilling;
 }
 
 module.exports = store;

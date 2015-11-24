@@ -1,0 +1,1007 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"getElements",
+				"getElementsByTagName(${0:name})	Element"
+			],
+			[
+				"receip",
+				"receiptXml"
+			],
+			[
+				"Ds",
+				"DispatchCommandResult"
+			],
+			[
+				"rece",
+				"receiptXml"
+			],
+			[
+				"json",
+				"jsonResult"
+			],
+			[
+				"product",
+				"productJsons"
+			],
+			[
+				"Product",
+				"productId"
+			],
+			[
+				"collection",
+				"collectionHeight"
+			],
+			[
+				"cou",
+				"counterReset	Style CSS"
+			],
+			[
+				"render",
+				"renderAllItems"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/wp8/InAppBillingPlugin.cs",
+			"settings":
+			{
+				"buffer_size": 3290,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "doc/api.md",
+			"settings":
+			{
+				"buffer_size": 30357,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/wp8/productMock.xml",
+			"settings":
+			{
+				"buffer_size": 544,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/constants.js",
+			"settings":
+			{
+				"buffer_size": 3093,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 33 files for \"setproduct\"\n\nD:\\Projects\\cordova-plugin-purchase\\src\\js\\platforms\\android-productdata.js:\n   11      //     \"productId\":\"example_subscription\"\n   12      //   }\n   13:     store.setProductData = function(product, data) {\n   14  \n   15          store.log.debug(\"android -> product data for \" + product.id);\n\nD:\\Projects\\cordova-plugin-purchase\\src\\js\\platforms\\plugin-adapter.js:\n  119                          continue;\n  120                      }\n  121:                     store.setProductData(p, purchase);\n  122                  }\n  123              }\n  ...\n  170              //     \"signature\":      \"qs54SGHgjGSJHSKJHIU\"\n  171              // }\n  172:             store.setProductData(product, data);\n  173          },\n  174          function(err, code) {\n\nD:\\Projects\\cordova-plugin-purchase\\src\\js\\platforms\\windows-productdata.js:\n   33       */\n   34  \n   35: 	store.setProductData = function(product, data) {\n   36  \n   37  		var transaction = data.transaction;\n\nD:\\Projects\\cordova-plugin-purchase\\src\\js\\platforms\\wp8-adapter.js:\n  101                          continue;\n  102                      }\n  103:                     store.setProductData(p, purchase);\n  104                  }\n  105              }\n  ...\n  148              var purhaseDateString = productReceipt.attributes[\"PurchaseDate\"].value;\n  149              var \n  150:             store.setProductData(product, data);\n  151          },\n  152          function(err, code) {\n\n6 matches across 4 files\n",
+			"settings":
+			{
+				"buffer_size": 1506,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "src/js/error.js",
+			"settings":
+			{
+				"buffer_size": 2058,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Makefile",
+			"settings":
+			{
+				"buffer_size": 3262,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/store-wp8.js",
+			"settings":
+			{
+				"buffer_size": 195,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/platforms/plugin-bridge.js",
+			"settings":
+			{
+				"buffer_size": 4189,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/platforms/plugin-adapter.js",
+			"settings":
+			{
+				"buffer_size": 7404,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/platforms/wp8-adapter.js",
+			"settings":
+			{
+				"buffer_size": 5929,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/order.js",
+			"settings":
+			{
+				"buffer_size": 2491,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/product.js",
+			"settings":
+			{
+				"buffer_size": 11870,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/products.js",
+			"settings":
+			{
+				"buffer_size": 1111,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 334.0,
+		"last_filter": "mark",
+		"selected_items":
+		[
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pa co in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"s s ",
+				"Package Control: List Unmanaged Packages"
+			],
+			[
+				" s s js",
+				"Set Syntax: JavaScript (Rails)"
+			],
+			[
+				"p c re",
+				"Package Control: Remove Package"
+			],
+			[
+				"p c in",
+				"Package Control: Install Package"
+			],
+			[
+				"p c i",
+				"Package Control: Install Package"
+			],
+			[
+				"pa c",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Projects/cordova-plugin-purchase",
+		"/D/Projects/cordova-plugin-purchase/doc",
+		"/D/Projects/cordova-plugin-purchase/src",
+		"/D/Projects/cordova-plugin-purchase/src/android",
+		"/D/Projects/cordova-plugin-purchase/src/android/com",
+		"/D/Projects/cordova-plugin-purchase/src/android/com/android",
+		"/D/Projects/cordova-plugin-purchase/src/android/com/android/vending",
+		"/D/Projects/cordova-plugin-purchase/src/android/com/android/vending/billing",
+		"/D/Projects/cordova-plugin-purchase/src/android/com/smartmobilesoftware",
+		"/D/Projects/cordova-plugin-purchase/src/android/com/smartmobilesoftware/inappbilling",
+		"/D/Projects/cordova-plugin-purchase/src/android/com/smartmobilesoftware/util",
+		"/D/Projects/cordova-plugin-purchase/src/js",
+		"/D/Projects/cordova-plugin-purchase/src/js/platforms",
+		"/D/Projects/cordova-plugin-purchase/src/windows",
+		"/D/Projects/cordova-plugin-purchase/src/wp8",
+		"/D/Projects/cordova-plugin-purchase/test",
+		"/D/Projects/cordova-plugin-purchase/test/js"
+	],
+	"file_history":
+	[
+		"/C/Users/akutas/Downloads/Mock In-App Purchase Library/C#/MockIAPLib/ProductLicense.cs",
+		"/C/Users/akutas/Downloads/Mock In-App Purchase Library/C#/MockIAPLib/MockIAP.cs",
+		"/D/Projects/cordova-plugin-purchase/src/js/refresh.js",
+		"/D/Projects/cordova-plugin-purchase/src/js/product-internal.js",
+		"/D/Projects/cordova-plugin-purchase/src/js/platforms/android-productdata.js",
+		"/D/Projects/cordova-plugin-purchase/src/js/platforms/ios-bridge.js",
+		"/D/Projects/cordova-plugin-purchase/www/README.md",
+		"/D/Projects/toHuman/wp8/platforms/wp8/MainPage.xaml",
+		"/D/Projects/toHuman/wp8/platforms/wp8/www/index.html",
+		"/D/Projects/toHuman/wp8/www/index.html",
+		"/D/Projects/wp8/platforms/wp8/www/index.html",
+		"/C/Users/akutas/.weinre/server.properties",
+		"/D/Projects/toHuman/wp8/config.xml",
+		"/D/Projects/toHuman/adm/js/views/treatments/treatment-crud-view.js",
+		"/D/Projects/toHuman/adm/js/views/testimonials/testimonial-crud-view.js",
+		"/D/Projects/toHuman/adm/js/views/languages/language-crud-view.js",
+		"/D/Projects/toHuman/adm/js/views/symptoms/symptom-crud-view.js",
+		"/D/Projects/toHuman/adm/js/views/labels/label-crud-view.js",
+		"/D/Projects/wp8/Gruntfile.js",
+		"/D/Projects/wp8/platforms/wp8/cordovalib/NativeExecution.cs",
+		"/D/Projects/wp8/config.xml",
+		"/D/Projects/wp8/platforms/wp8/To_Human.csproj",
+		"/D/Projects/wp8/platforms/wp8/To_Human.csproj.user",
+		"/D/Projects/toHuman/adm/js/views/users/user-crud-view.js",
+		"/D/Projects/toHuman/adm/js/views/testimonials/testimonials-collection-view.js",
+		"/D/Projects/toHuman/adm/js/views/labels/labels-collection-view.js",
+		"/D/Projects/toHuman/adm/js/controllers/labels-controller.js",
+		"/D/Projects/toHuman/adm/js/templates/labels/labels-collection-view.hbs",
+		"/D/Projects/toHuman/adm/js/templates/labels/label-crud-view.hbs",
+		"/D/Projects/toHuman/adm/js/templates/labels/label-view.hbs",
+		"/D/Projects/toHuman/adm/js/models/base/model.js",
+		"/D/Projects/toHuman/adm/js/models/labels/labels-collection.js",
+		"/D/Projects/toHuman/cordova/bower.json",
+		"/D/Projects/toHuman/cordova/src/js/templates/auth/forgot-view.hbs",
+		"/D/Projects/toHuman/cordova/src/js/views/auth/forgot-view.js",
+		"/D/Projects/toHuman/cordova/src/js/templates/header-view.hbs",
+		"/D/Projects/toHuman/cordova/src/js/views/site-view.js",
+		"/D/Projects/toHuman/cordova/src/js/routes.js",
+		"/D/Projects/toHuman/cordova/src/js/templates/profile/profile-view.hbs",
+		"/D/Projects/toHuman/cordova/src/js/authorizer.js",
+		"/D/Projects/toHuman/cordova/src/js/templates/symptoms/symptom-details-view.hbs",
+		"/D/Projects/toHuman/cordova/src/js/templates/auth/restore-view.hbs",
+		"/D/Projects/toHuman/cordova/src/js/views/auth/restore-view.js",
+		"/D/Projects/toHuman/cordova/config.xml",
+		"/D/Projects/toHuman/cordova/src/js/models/profile/profile-model.js",
+		"/D/Projects/toHuman/cordova/src/js/lang.js",
+		"/D/Projects/toHuman/cordova/package.json",
+		"/D/Projects/toHuman/cordova/src/js/views/symptoms/symptom-details-view.js",
+		"/D/Projects/toHuman/cordova/src/js/models/symptoms/symptom-model.js",
+		"/D/Projects/toHuman/cordova/src/js/views/header-view.js",
+		"/D/Projects/toHuman/cordova/src/js/views/symptoms/symptoms-collection-view.js",
+		"/D/Projects/toHuman/cordova/src/js/models/symptoms/symptoms-collection.js",
+		"/D/Projects/toHuman/cordova/src/js/controllers/auth-controller.js",
+		"/D/Projects/toHuman/cordova/src/js/controllers/base/controller.js",
+		"/D/Projects/toHuman/cordova/src/css/main.css",
+		"/D/Projects/toHuman/cordova/src/css/icons.css",
+		"/D/Projects/toHuman/cordova/src/js/controllers/base/app-controller.js",
+		"/D/Projects/toHuman/cordova/src/js/views/auth/login-view.js",
+		"/D/Projects/toHuman/cordova/src/js/views/base/collection-view.js",
+		"/D/Projects/toHuman/cordova/src/js/views/symptoms/symptom-view.js",
+		"/D/Projects/toHuman/cordova/src/js/controllers/symptoms-controller.js",
+		"/D/Projects/toHuman/cordova/src/js/templates/symptoms/symptoms-collection-view.hbs",
+		"/D/Projects/toHuman/cordova/src/js/views/profile/profile-language-view.js",
+		"/D/Projects/toHuman/cordova/src/js/views/profile/profile-view.js",
+		"/D/Projects/toHuman/cordova/src/js/iap.js",
+		"/D/Projects/toHuman/cordova/src/js/controllers/profile-controller.js",
+		"/D/Projects/toHuman/Gruntfile.js",
+		"/D/Projects/toHuman/cordova/src/js/models/header-model.js",
+		"/D/Projects/toHuman/cordova/src/js/views/base/view.js",
+		"/D/Projects/toHuman/cordova/src/js/main.js",
+		"/D/Projects/toHuman/cordova/src/js/init.js",
+		"/D/Projects/toHuman/cordova/src/js/app.js",
+		"/D/Projects/toHuman/cordova/src/build-js-link.inc",
+		"/D/Projects/toHuman/adm/js/controllers/treatments-controller.js",
+		"/D/Projects/toHuman/adm/js/templates/symptoms/symptoms-collection-view.hbs",
+		"/D/Projects/toHuman/adm/js/controllers/auth-controller.js",
+		"/D/Projects/toHuman/adm/js/controllers/testimonials-controller.js",
+		"/D/Projects/toHuman/adm/js/models/treatments/treatments-collection.js",
+		"/D/Projects/toHuman/adm/js/models/treatments/treatment-model.js",
+		"/D/Projects/toHuman/adm/bower_components/select2/select2.js",
+		"/D/Projects/toHuman/adm/js/config.js",
+		"/D/Projects/toHuman/adm/js/config.json",
+		"/D/Projects/toHuman/adm/js/views/base/collection-view.js",
+		"/D/Projects/toHuman/adm/js/controllers/languages-controller.js",
+		"/D/Projects/toHuman/app/js/models/base/model.js",
+		"/D/Projects/toHuman/app/js/models/auth/about-model.js",
+		"/D/Projects/toHuman/app/js/models/auth/login-model.js",
+		"/D/Projects/toHuman/app/js/controllers/auth-controller.js",
+		"/D/Projects/toHuman/app/js/iap.js",
+		"/D/Projects/toHuman/app/js/views/auth/login-view.js",
+		"/D/Projects/toHuman/app/js/authorizer.js",
+		"/D/Projects/toHuman/app/Gruntfile.js",
+		"/D/Projects/toHuman/app/js/config.json",
+		"/C/Users/akutas/.cordova/lib/npm_cache/cordova-android/4.1.1/package/bin/node_modules/q/q.js",
+		"/D/Projects/toHuman/app/res/screen/android/screen-ldpi-portrait.png",
+		"/D/Projects/toHuman/app/res/screen/android/screen-hdpi-portrait.png",
+		"/D/Projects/toHuman/cordova/www/css/patches.css"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			"D:\\Projects\\cordova-plugin-purchase\\src\\js"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"setproduct",
+			"BILLING_RESPONSE_RESULT",
+			"re-refreshed",
+			"pj.",
+			"consume",
+			"consumePurchase",
+			"        \n",
+			"//",
+			"transaction",
+			"buy",
+			"order",
+			"buy",
+			"order",
+			"buy",
+			"getPurchases",
+			"own",
+			"consume",
+			"fullfill",
+			"fulfill",
+			"transactions",
+			"transaction",
+			" ",
+			"lang",
+			"await",
+			"},\n",
+			"'\n",
+			"options",
+			"labelCRUD",
+			"changepwd",
+			"resets",
+			"subscribeEvent",
+			"time1",
+			"timeout",
+			"Timeout",
+			"timeout",
+			"isTokenAlive",
+			"addEventListener",
+			"SearchQueryChange",
+			"searchQueryChange",
+			"handleSearchQueryChange",
+			"local",
+			"inAppBilling",
+			"_this",
+			"renderAllItems",
+			"retrieve",
+			"handleSearchQueryChange",
+			"onInputSearch",
+			"handleSearchQueryChange",
+			"badge",
+			"openTreatment",
+			"toggleModal"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/wp8/InAppBillingPlugin.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1003,
+								1003
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1200.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "doc/api.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 30357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2003,
+								2003
+							]
+						],
+						"settings":
+						{
+							"parser": "github",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"target": "browser",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 980.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/wp8/productMock.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								503,
+								503
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/js/constants.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3093,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								362,
+								362
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 300.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1506,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										202,
+										212
+									],
+									[
+										506,
+										516
+									],
+									[
+										702,
+										712
+									],
+									[
+										903,
+										913
+									],
+									[
+										1172,
+										1182
+									],
+									[
+										1394,
+										1404
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/js/error.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2058,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								610,
+								610
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 120.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1078,
+								1078
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/js/store-wp8.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								169,
+								169
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"file": "src/js/platforms/plugin-bridge.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4189,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1898,
+								1913
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1380.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/js/platforms/plugin-adapter.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4832,
+								4832
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1320.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/js/platforms/wp8-adapter.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5929,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2154,
+								2154
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/js/order.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2491,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1824,
+								1824
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/js/product.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11870,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2455,
+								2455
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "src/js/products.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.485932721713,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 130.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "plugin.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 223.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

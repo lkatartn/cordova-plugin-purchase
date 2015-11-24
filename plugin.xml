@@ -117,6 +117,17 @@ SOFTWARE.
 		</js-module>
 		
 	</platform>
+    <platform name="wp8">
+        <js-module src="www/store-wp8.js" name="InAppPurchase">
+            <clobbers target="store" />
+        </js-module>
+        <source-file src="src/wp8/InAppBillingPlugin.cs" />
+        <config-file target="config.xml" parent="/*">
+            <feature name="InAppBillingPlugin">
+                <param name="wp-package" value="InAppBillingPlugin"/>
+            </feature>
+        </config-file>
+    </platform>
 <!--
 vim: ts=4:sw=4:et
 -->

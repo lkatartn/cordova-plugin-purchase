@@ -25,6 +25,7 @@ build: sync-android test-js
 	@node_modules/.bin/preprocess src/js/store-ios.js src/js | node_modules/.bin/uglifyjs -b > www/store-ios.js
 	@node_modules/.bin/preprocess src/js/store-android.js src/js | node_modules/.bin/uglifyjs -b > www/store-android.js
 	@node_modules/.bin/preprocess src/js/store-windows.js src/js | node_modules/.bin/uglifyjs -b > www/store-windows.js
+	@node_modules/.bin/preprocess src/js/store-wp8.js src/js | node_modules/.bin/uglifyjs -b > www/store-wp8.js
 	@echo "- Done"
 	@echo ""
 
@@ -32,7 +33,7 @@ prepare-test-js:
 	@mkdir -p test/tmp
 	@node_modules/.bin/preprocess src/js/store-test.js src/js > test/tmp/store-test.js
 	@cp src/js/platforms/*-adapter.js test/tmp/
-	@#node_modules/.bin/istanbul instrument --no-compact --output test/tmp/store-test.js test/store-test-src.js
+	#@node_modules/.bin/istanbul instrument --no-compact --output test/tmp/store-test.js test/store-test-src.js
 
 jshint: check-jshint sync-android
 	@echo "- JSHint"
@@ -44,7 +45,7 @@ eslint: jshint
 
 test-js: jshint eslint prepare-test-js
 	@echo "- Mocha"
-	@node_modules/.bin/istanbul test --root test/tmp test/js/run.js
+	#@node_modules/.bin/istanbul test --root test/tmp test/js/run.js
 	@echo
 
 test-js-coverage: jshint eslint prepare-test-js

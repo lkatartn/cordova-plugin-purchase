@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ProductListings>
+    <ProductListing Key="com.example.test1" Purchased="false" Fulfilled="false">
+        <Name>Testproduct</Name>
+        <Description>A sample product listing</Description>
+        <ProductId>test.consumable.1</ProductId>
+        <ProductType>Consumable</ProductType>
+        <FormattedPrice>$9.99</FormattedPrice>
+        <CurrencyCode>USD</CurrencyCode>
+        <ImageUri></ImageUri>
+        <Keywords>test;product</Keywords>
+        <Tag>Additional text</Tag>
+    </ProductListing>
+</ProductListings>

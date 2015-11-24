@@ -12,6 +12,7 @@
 /*///*/     store.PAID_SUBSCRIPTION = "paid subscription";
 /*///*/     store.CONSUMABLE        = "consumable";
 /*///*/     store.NON_CONSUMABLE    = "non consumable";
+/*///*/     store.DURABLE			= store.NON_CONSUMABLE;
 
 ///
 /// ### error codes
