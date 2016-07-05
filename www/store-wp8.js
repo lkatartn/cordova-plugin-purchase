@@ -856,7 +856,9 @@ store.verbosity = 0;
     store.when("refreshed", function() {
         if (!initialized) init();
     });
-    store.when("re-refreshed", function() {});
+    store.when("re-refreshed", function() {
+        store.ready(true);
+    });
     function init() {
         if (initialized) return;
         initialized = true;
@@ -883,12 +885,13 @@ store.verbosity = 0;
     function iabLoaded(validProducts) {
         store.log.debug("plugin -> loaded - " + JSON.stringify(validProducts));
         var p, i;
-        for (i = 0; i < validProducts.length; ++i) {
-            if (validProducts[i].productId) p = store.products.byId[validProducts[i].productId]; else p = null;
+        for (i = 0; i < validProducts.length; i++) {
+            if (validProducts[i].id) p = store.products.byId[validProducts[i].id]; else p = null;
+            store.log.debug(" loaded valid product " + p);
             if (p) {
                 p.set({
                     title: validProducts[i].title || validProducts[i].name,
-                    price: validProducts[i].price || validProducts[i].formattedPrice,
+                    price: validProducts[i].price || validProducts[i].formattedPrice || "",
                     description: validProducts[i].description,
                     currency: validProducts[i].price_currency_code ? validProducts[i].price_currency_code : "",
                     state: store.VALID
@@ -903,6 +906,24 @@ store.verbosity = 0;
                 p.trigger("loaded");
             }
         }
+        iabGetPurchases();
+    }
+    function iabGetPurchases() {
+        store.inappbilling.getPurchases(function(purchases) {
+            store.log.debug("get purchases: " + JSON.stringify(purchases));
+            if (purchases && purchases.length) {
+                for (var i = 0; i < purchases.length; i++) {
+                    var purchase = purchases[i];
+                    var p = store.get(purchase.id);
+                    if (!p) {
+                        store.log.warn("plugin -> user owns a non-registered product");
+                        continue;
+                    }
+                    p.set("state", store.APPROVED);
+                }
+            }
+            store.ready(true);
+        }, function() {});
     }
     store.when("requested", function(product) {
         store.ready(function() {
@@ -923,14 +944,16 @@ store.verbosity = 0;
             product.set("state", store.INITIATED);
             var method = "buy";
             store.inappbilling[method](function(data) {
-                var xmlString = decodeURIComponent(window.escape(window.atob(data.base64)));
+                var xmlString = window.atob(data.base64);
                 var parser = new DOMParser();
                 var doc = parser.parseFromString(xmlString, "text/xml");
                 var productData = {};
                 var productReceipt = doc.documentElement.getElementsByTagName("ProductReceipt")[0];
                 productData.purhaseDateString = productReceipt.attributes.PurchaseDate.value || "";
-                productData.expirationDateString = productReceipt.attributes.ExpirationDate.value || "";
+                productData.expirationDateString = productReceipt.attributes.ExpirationDate && productReceipt.attributes.ExpirationDate.value || "";
+                productData.receipt = data.base64;
                 store.setProductData(product, productData);
+                product.set("state", store.APPROVED);
             }, function(err, code) {
                 store.log.info("plugin -> " + method + " error " + code);
                 if (code === store.ERR_PAYMENT_CANCELLED) {
@@ -948,7 +971,6 @@ store.verbosity = 0;
     store.when("product", "finished", function(product) {
         store.log.debug("plugin -> consumable finished");
         if (product.type === store.CONSUMABLE) {
-            product.transaction = null;
             store.inappbilling.consumePurchase(function() {
                 store.log.debug("plugin -> consumable consumed");
                 product.set("state", store.VALID);
@@ -962,6 +984,20 @@ store.verbosity = 0;
             product.set("state", store.OWNED);
         }
     });
+})();
+
+(function() {
+    "use strict";
+    store.setProductData = function(product, data) {
+        store.log.debug("wp8 -> product data for " + product.id);
+        store.log.debug(data);
+        product.transaction = {
+            type: "windows-store",
+            purchaseDate: data.purchaseDateString,
+            expirationDate: data.expirationDateString,
+            receipt: data.receipt
+        };
+    };
 })();
 
 if (window) {

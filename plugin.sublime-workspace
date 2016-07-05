@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"ProductLice",
+				"ProductLicense"
+			],
+			[
+				"ProductLi",
+				"ProductLicenses"
+			],
+			[
+				"Get",
+				"getAppReceipt"
+			],
+			[
+				"Curr",
+				"CurrentApp"
+			],
+			[
+				"product",
+				"ProductId"
+			],
+			[
+				"cordova",
+				"cordova-plugin-purchase"
+			],
+			[
+				"expirationDA",
+				"expirationDateString"
+			],
+			[
+				"purchaseDa",
+				"purchaseDateString"
+			],
+			[
+				"purchase",
+				"purchaseDateString"
+			],
+			[
+				"InApp",
+				"InAppBillingPlugin"
+			],
+			[
+				"js",
+				"js-module"
+			],
+			[
 				"getElements",
 				"getElementsByTagName(${0:name})	Element"
 			],
@@ -22,10 +66,6 @@
 			[
 				"json",
 				"jsonResult"
-			],
-			[
-				"product",
-				"productJsons"
 			],
 			[
 				"Product",
@@ -48,116 +88,66 @@
 	"buffers":
 	[
 		{
+			"file": "src/js/platforms/wp8-productData.js",
+			"settings":
+			{
+				"buffer_size": 619,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/platforms/android-productdata.js",
+			"settings":
+			{
+				"buffer_size": 1727,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "src/wp8/InAppBillingPlugin.cs",
 			"settings":
 			{
-				"buffer_size": 3290,
+				"buffer_size": 5132,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "doc/api.md",
+			"file": "/D/Projects/wp8/config.xml",
 			"settings":
 			{
-				"buffer_size": 30357,
+				"buffer_size": 6045,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/Projects/toHuman/cordova/src/js/authorizer.js",
+			"settings":
+			{
+				"buffer_size": 9713,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/wp8/productMock.xml",
+			"file": "/D/Projects/toHuman/wp8/www/js/init.js",
 			"settings":
 			{
-				"buffer_size": 544,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/constants.js",
-			"settings":
-			{
-				"buffer_size": 3093,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Searching 33 files for \"setproduct\"\n\nD:\\Projects\\cordova-plugin-purchase\\src\\js\\platforms\\android-productdata.js:\n   11      //     \"productId\":\"example_subscription\"\n   12      //   }\n   13:     store.setProductData = function(product, data) {\n   14  \n   15          store.log.debug(\"android -> product data for \" + product.id);\n\nD:\\Projects\\cordova-plugin-purchase\\src\\js\\platforms\\plugin-adapter.js:\n  119                          continue;\n  120                      }\n  121:                     store.setProductData(p, purchase);\n  122                  }\n  123              }\n  ...\n  170              //     \"signature\":      \"qs54SGHgjGSJHSKJHIU\"\n  171              // }\n  172:             store.setProductData(product, data);\n  173          },\n  174          function(err, code) {\n\nD:\\Projects\\cordova-plugin-purchase\\src\\js\\platforms\\windows-productdata.js:\n   33       */\n   34  \n   35: 	store.setProductData = function(product, data) {\n   36  \n   37  		var transaction = data.transaction;\n\nD:\\Projects\\cordova-plugin-purchase\\src\\js\\platforms\\wp8-adapter.js:\n  101                          continue;\n  102                      }\n  103:                     store.setProductData(p, purchase);\n  104                  }\n  105              }\n  ...\n  148              var purhaseDateString = productReceipt.attributes[\"PurchaseDate\"].value;\n  149              var \n  150:             store.setProductData(product, data);\n  151          },\n  152          function(err, code) {\n\n6 matches across 4 files\n",
-			"settings":
-			{
-				"buffer_size": 1506,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "src/js/error.js",
-			"settings":
-			{
-				"buffer_size": 2058,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Makefile",
-			"settings":
-			{
-				"buffer_size": 3262,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/store-wp8.js",
-			"settings":
-			{
-				"buffer_size": 195,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/platforms/plugin-bridge.js",
-			"settings":
-			{
-				"buffer_size": 4189,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/platforms/plugin-adapter.js",
-			"settings":
-			{
-				"buffer_size": 7404,
-				"line_ending": "Windows"
+				"buffer_size": 752245,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "src/js/platforms/wp8-adapter.js",
 			"settings":
 			{
-				"buffer_size": 5929,
+				"buffer_size": 6183,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/js/order.js",
+			"file": "/C/Users/akutas/Downloads/Mock In-App Purchase Library/C#/MockIAPLib/ProductLicense.cs",
 			"settings":
 			{
-				"buffer_size": 2491,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/product.js",
-			"settings":
-			{
-				"buffer_size": 11870,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/products.js",
-			"settings":
-			{
-				"buffer_size": 1111,
+				"buffer_size": 2527,
 				"line_ending": "Windows"
 			}
 		}
@@ -248,35 +238,66 @@
 	"expanded_folders":
 	[
 		"/D/Projects/cordova-plugin-purchase",
-		"/D/Projects/cordova-plugin-purchase/doc",
 		"/D/Projects/cordova-plugin-purchase/src",
-		"/D/Projects/cordova-plugin-purchase/src/android",
-		"/D/Projects/cordova-plugin-purchase/src/android/com",
-		"/D/Projects/cordova-plugin-purchase/src/android/com/android",
-		"/D/Projects/cordova-plugin-purchase/src/android/com/android/vending",
-		"/D/Projects/cordova-plugin-purchase/src/android/com/android/vending/billing",
-		"/D/Projects/cordova-plugin-purchase/src/android/com/smartmobilesoftware",
-		"/D/Projects/cordova-plugin-purchase/src/android/com/smartmobilesoftware/inappbilling",
-		"/D/Projects/cordova-plugin-purchase/src/android/com/smartmobilesoftware/util",
 		"/D/Projects/cordova-plugin-purchase/src/js",
 		"/D/Projects/cordova-plugin-purchase/src/js/platforms",
 		"/D/Projects/cordova-plugin-purchase/src/windows",
 		"/D/Projects/cordova-plugin-purchase/src/wp8",
-		"/D/Projects/cordova-plugin-purchase/test",
-		"/D/Projects/cordova-plugin-purchase/test/js"
+		"/D/Projects/cordova-plugin-purchase/www"
 	],
 	"file_history":
 	[
-		"/C/Users/akutas/Downloads/Mock In-App Purchase Library/C#/MockIAPLib/ProductLicense.cs",
+		"/D/Projects/wp8/platforms/wp8/Properties/WMAppManifest.xml",
+		"/D/Projects/wp8/platforms/wp8/App.xaml",
+		"/D/Projects/wp8/platforms/wp8/config.xml",
+		"/C/Users/akutas/Downloads/Mock In-App Purchase Library/C#/MockIAPLib/CurrentApp.cs",
+		"/D/Projects/cordova-plugin-purchase/src/js/platforms/plugin-adapter.js",
+		"/D/Projects/wp8/Gruntfile.js",
+		"/D/Projects/wp8/config.xml",
+		"/D/Projects/helloworld/hello/platforms/wp8/config.xml",
+		"/D/Projects/wp8/src/js/views/header-view.js",
+		"/D/Projects/toHuman/wp8/www/index.html",
+		"/D/Projects/toHuman/cordova/src/js/views/header-view.js",
+		"/D/Projects/cordova-plugin-purchase/plugin.xml",
+		"/D/Projects/cordova-plugin-purchase/src/js/platforms/plugin-bridge.js",
+		"/D/Projects/cordova-plugin-purchase/src/wp8/InAppBillingPlugin.cs",
 		"/C/Users/akutas/Downloads/Mock In-App Purchase Library/C#/MockIAPLib/MockIAP.cs",
+		"/D/Projects/wp8/www/index.html",
+		"/D/Projects/helloworld/hello/platforms/wp8/HelloCordova.csproj",
+		"/D/Projects/toHuman/cordova/src/toHuman.sublime-project",
+		"/D/Projects/toHuman/wp8/platforms/wp8/www/index.html",
+		"/D/Projects/toHuman/wp8/www/js/main.js",
+		"/D/Projects/toHuman/wp8/www/js/init.js",
+		"/D/Projects/helloworld/hello/platforms/wp8/HelloCordova.sln",
+		"/D/Projects/helloworld/hello/config.xml",
+		"/D/Projects/wp8/package.json",
+		"/D/Projects/wp8/platforms/wp8/wp8.json",
+		"/D/Projects/wp8/platforms/android/res/values/billing_key_param.xml",
+		"/D/Projects/wp8/platforms/android/AndroidManifest.xml",
+		"/D/Projects/cordova-plugin-purchase/src/js/product.js",
+		"/D/Projects/cordova-plugin-purchase/src/js/order.js",
+		"/D/Projects/helloworld/hello/plugins/fetch.json",
+		"/D/Projects/helloworld/hello/www/index.html",
+		"/D/Projects/cordova-plugin-purchase/Makefile",
+		"/D/Projects/cordova-plugin-purchase/doc/api.md",
+		"/D/Projects/cordova-plugin-purchase/src/js/platforms/wp8-productData.js",
+		"/D/Projects/cordova-plugin-purchase/src/wp8/productMock.xml",
+		"/D/Projects/cordova-plugin-purchase/src/js/constants.js",
+		"/D/Projects/helloworld/hello/platforms/wp8/packages.config",
+		"/D/Projects/helloworld/hello/plugins/cc.fovea.cordova.purchase/plugin.xml",
+		"/C/Users/akutas/Downloads/Mock In-App Purchase Library/C#/IAPMockLibSample/Properties/WMAppManifest.xml",
+		"/C/Users/akutas/Downloads/Mock In-App Purchase Library/C#/IAPMockLibSample/Properties/AppManifest.xml",
+		"/D/Projects/helloworld/hello/platforms/platforms.json",
+		"/D/Projects/helloworld/hello/plugins/cordova-plugin-purchase/plugin.xml",
+		"/D/Projects/cordova-plugin-purchase/src/js/store-wp8.js",
+		"/D/Projects/helloworld/hiely/config.xml",
+		"/C/Users/akutas/Downloads/Mock In-App Purchase Library/C#/MockIAPLib/ProductLicense.cs",
 		"/D/Projects/cordova-plugin-purchase/src/js/refresh.js",
 		"/D/Projects/cordova-plugin-purchase/src/js/product-internal.js",
 		"/D/Projects/cordova-plugin-purchase/src/js/platforms/android-productdata.js",
 		"/D/Projects/cordova-plugin-purchase/src/js/platforms/ios-bridge.js",
 		"/D/Projects/cordova-plugin-purchase/www/README.md",
 		"/D/Projects/toHuman/wp8/platforms/wp8/MainPage.xaml",
-		"/D/Projects/toHuman/wp8/platforms/wp8/www/index.html",
-		"/D/Projects/toHuman/wp8/www/index.html",
 		"/D/Projects/wp8/platforms/wp8/www/index.html",
 		"/C/Users/akutas/.weinre/server.properties",
 		"/D/Projects/toHuman/wp8/config.xml",
@@ -285,9 +306,7 @@
 		"/D/Projects/toHuman/adm/js/views/languages/language-crud-view.js",
 		"/D/Projects/toHuman/adm/js/views/symptoms/symptom-crud-view.js",
 		"/D/Projects/toHuman/adm/js/views/labels/label-crud-view.js",
-		"/D/Projects/wp8/Gruntfile.js",
 		"/D/Projects/wp8/platforms/wp8/cordovalib/NativeExecution.cs",
-		"/D/Projects/wp8/config.xml",
 		"/D/Projects/wp8/platforms/wp8/To_Human.csproj",
 		"/D/Projects/wp8/platforms/wp8/To_Human.csproj.user",
 		"/D/Projects/toHuman/adm/js/views/users/user-crud-view.js",
@@ -316,7 +335,6 @@
 		"/D/Projects/toHuman/cordova/package.json",
 		"/D/Projects/toHuman/cordova/src/js/views/symptoms/symptom-details-view.js",
 		"/D/Projects/toHuman/cordova/src/js/models/symptoms/symptom-model.js",
-		"/D/Projects/toHuman/cordova/src/js/views/header-view.js",
 		"/D/Projects/toHuman/cordova/src/js/views/symptoms/symptoms-collection-view.js",
 		"/D/Projects/toHuman/cordova/src/js/models/symptoms/symptoms-collection.js",
 		"/D/Projects/toHuman/cordova/src/js/controllers/auth-controller.js",
@@ -356,14 +374,7 @@
 		"/D/Projects/toHuman/app/js/models/auth/login-model.js",
 		"/D/Projects/toHuman/app/js/controllers/auth-controller.js",
 		"/D/Projects/toHuman/app/js/iap.js",
-		"/D/Projects/toHuman/app/js/views/auth/login-view.js",
-		"/D/Projects/toHuman/app/js/authorizer.js",
-		"/D/Projects/toHuman/app/Gruntfile.js",
-		"/D/Projects/toHuman/app/js/config.json",
-		"/C/Users/akutas/.cordova/lib/npm_cache/cordova-android/4.1.1/package/bin/node_modules/q/q.js",
-		"/D/Projects/toHuman/app/res/screen/android/screen-ldpi-portrait.png",
-		"/D/Projects/toHuman/app/res/screen/android/screen-hdpi-portrait.png",
-		"/D/Projects/toHuman/cordova/www/css/patches.css"
+		"/D/Projects/toHuman/app/js/views/auth/login-view.js"
 	],
 	"find":
 	{
@@ -382,6 +393,24 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"invalid",
+			"OWNED",
+			"owned",
+			"OWNED",
+			"initiated",
+			"when(\"initiated\")",
+			"ready(true)",
+			"requested",
+			"testmode",
+			"Initialize IAP",
+			"touch",
+			">",
+			"history",
+			"backbut",
+			"><",
+			"setProductData",
+			"expirationDateString",
+			"var ",
 			"setproduct",
 			"BILLING_RESPONSE_RESULT",
 			"re-refreshed",
@@ -450,421 +479,24 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/wp8/InAppBillingPlugin.cs",
+					"file": "src/js/platforms/wp8-productData.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3290,
+						"buffer_size": 619,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1003,
-								1003
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1200.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "doc/api.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 30357,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2003,
-								2003
-							]
-						],
-						"settings":
-						{
-							"parser": "github",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"tab_size": 4,
-							"target": "browser",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 980.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/wp8/productMock.xml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 544,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								503,
-								503
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/js/constants.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3093,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								362,
-								362
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 300.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1506,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										202,
-										212
-									],
-									[
-										506,
-										516
-									],
-									[
-										702,
-										712
-									],
-									[
-										903,
-										913
-									],
-									[
-										1172,
-										1182
-									],
-									[
-										1394,
-										1404
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/js/error.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2058,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								610,
-								610
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 120.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Makefile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3262,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1078,
-								1078
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Makefile/Makefile.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/js/store-wp8.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 195,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								169,
-								169
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 8,
-					"file": "src/js/platforms/plugin-bridge.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4189,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1898,
-								1913
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1380.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/js/platforms/plugin-adapter.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7404,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4832,
-								4832
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1320.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/js/platforms/wp8-adapter.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5929,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2154,
-								2154
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "src/js/order.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2491,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1824,
-								1824
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 180.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "src/js/product.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11870,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2455,
-								2455
+								611,
+								611
 							]
 						],
 						"settings":
@@ -881,12 +513,198 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
-					"file": "src/js/products.js",
-					"semi_transient": true,
+					"buffer": 1,
+					"file": "src/js/platforms/android-productdata.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1111,
+						"buffer_size": 1727,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								361,
+								361
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 4.0,
+						"translation.y": 41.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/wp8/InAppBillingPlugin.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4255,
+								4255
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1987.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/Projects/wp8/config.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6045,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6045,
+								6045
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1820.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "/D/Projects/toHuman/cordova/src/js/authorizer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9713,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7326,
+								7326
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1980.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/D/Projects/toHuman/wp8/www/js/init.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 752245,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								715471,
+								715471
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 466801.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/js/platforms/wp8-adapter.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2646,
+								2646
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1980.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Users/akutas/Downloads/Mock In-App Purchase Library/C#/MockIAPLib/ProductLicense.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2527,
 						"regions":
 						{
 						},
@@ -899,13 +717,15 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -939,7 +759,7 @@
 		"cols":
 		[
 			0.0,
-			0.485932721713,
+			0.584481725584,
 			1.0
 		],
 		"rows":
@@ -991,7 +811,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -999,7 +819,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 223.0,
+	"side_bar_width": 284.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

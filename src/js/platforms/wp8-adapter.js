@@ -9,7 +9,7 @@ store.when("refreshed", function() {
 });
 
 store.when("re-refreshed", function() {
-    // iabGetPurchases();
+    store.ready(true);
 });
 
 function init() {
@@ -46,17 +46,17 @@ function iabReady() {
 function iabLoaded(validProducts) {
     store.log.debug("plugin -> loaded - " + JSON.stringify(validProducts));
     var p, i;
-    for (i = 0; i < validProducts.length; ++i) {
+    for (i = 0; i < validProducts.length; i++) {
 
-        if (validProducts[i].productId)
-            p = store.products.byId[validProducts[i].productId];
+        if (validProducts[i].id)
+            p = store.products.byId[validProducts[i].id];
         else
             p = null;
-
+        store.log.debug(" loaded valid product " + p);
         if (p) {
             p.set({
                 title: validProducts[i].title || validProducts[i].name,
-                price: validProducts[i].price || validProducts[i].formattedPrice,
+                price: validProducts[i].price || validProducts[i].formattedPrice || "",
                 description: validProducts[i].description,
                 currency: validProducts[i].price_currency_code ? validProducts[i].price_currency_code : "",
                 state: store.VALID
@@ -71,45 +71,41 @@ function iabLoaded(validProducts) {
             p.trigger("loaded");
         }
     }
-
-   // iabGetPurchases();
+   iabGetPurchases();
 }
-
-// function iabGetPurchases() {
-//     store.inappbilling.getPurchases(
-//         function(purchases) { // success
-//             // example purchases data:
-//             //
-//             // [
-//             //   {
-//             //     "purchaseToken":"tokenabc",
-//             //     "developerPayload":"mypayload1",
-//             //     "packageName":"com.example.MyPackage",
-//             //     "purchaseState":0,
-//             //     "orderId":"12345.6789",
-//             //     "purchaseTime":1382517909216,
-//             //     "productId":"example_subscription"
-//             //   },
-//             //   { ... }
-//             // ]
-//             if (purchases && purchases.length) {
-//                 for (var i = 0; i < purchases.length; ++i) {
-//                     var purchase = purchases[i];
-//                     var p = store.get(purchase.productId);
-//                     if (!p) {
-//                         store.log.warn("plugin -> user owns a non-registered product");
-//                         continue;
-//                     }
-//                     store.setProductData(p, purchase);
-//                 }
-//             }
-//             store.ready(true);
-//         },
-//         function() { // error
-//             // TODO
-//         }
-//     );
-// }
+function iabGetPurchases() {
+    store.inappbilling.getPurchases(
+        function(purchases) { // success
+            // example purchases data:
+            //
+            // [
+            //   {
+            //     "id":"ProductId",
+            //     "active":"true",
+            //     "consumable":"true/false",
+            //     "expirationDate":"isoString"
+            //   },
+            //   { ... }
+            // ]
+            store.log.debug("get purchases: " + JSON.stringify(purchases));
+            if (purchases && purchases.length) {
+                for (var i = 0; i < purchases.length; i++ ) {
+                    var purchase = purchases[i];
+                    var p = store.get(purchase.id);
+                    if (!p) {
+                        store.log.warn("plugin -> user owns a non-registered product");
+                        continue;
+                    }
+                    p.set('state', store.APPROVED);
+                }
+            }
+            store.ready(true);
+        },
+        function() { // error
+            // TODO
+        }
+    );
+}
 
 
 store.when("requested", function(product) {
@@ -142,17 +138,18 @@ store.when("requested", function(product) {
             // {
             //     base64: XML encoded in base64
             // }
-            var xmlString = decodeURIComponent(window.escape(window.atob(data.base64)));
+            var xmlString = window.atob(data.base64);
             var parser = new DOMParser();
             var doc = parser.parseFromString(xmlString, "text/xml");
             var productData = {};
 
             var productReceipt = doc.documentElement.getElementsByTagName("ProductReceipt")[0];
             productData.purhaseDateString = productReceipt.attributes.PurchaseDate.value || "";
-            productData.expirationDateString = productReceipt.attributes.ExpirationDate.value || "";
+            productData.expirationDateString = (productReceipt.attributes.ExpirationDate && productReceipt.attributes.ExpirationDate.value) || "";
             productData.receipt = data.base64;
 
             store.setProductData(product, productData);
+            product.set("state", store.APPROVED);
         },
         function(err, code) {
             store.log.info("plugin -> " + method + " error " + code);
@@ -178,7 +175,6 @@ store.when("requested", function(product) {
 store.when("product", "finished", function(product) {
     store.log.debug("plugin -> consumable finished");
     if (product.type === store.CONSUMABLE) {
-        product.transaction = null;
         store.inappbilling.consumePurchase(
             function() { // success
                 store.log.debug("plugin -> consumable consumed");

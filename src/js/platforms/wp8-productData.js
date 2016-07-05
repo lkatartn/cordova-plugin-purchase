@@ -12,7 +12,7 @@
         store.log.debug(data);
         //
         product.transaction = {
-            type: 'windows-store', 
+            type: 'windows-store',
             purchaseDate : data.purchaseDateString,
             expirationDate : data.expirationDateString,
             receipt: data.receipt
